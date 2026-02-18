@@ -1,9 +1,10 @@
-
-var x = 32243;
-var reverse = 0;
-while (x > 0) {
-  let lastDigit = x % 10;
-  reverse = reverse * 10 + lastDigit;
-  x = Math.floor(x / 10);
+function reverseNumber(value) {
+  var reverse = 0;
+  while (value > 0) {
+    let lastDigit = value % 10;
+    reverse = reverse * 10 + lastDigit;
+    value = Math.floor(value / 10);
+  }
+  return reverse;
 }
-console.log("Reverse Number of 32243 " ,reverse);
+console.log(reverseNumber(32243));
